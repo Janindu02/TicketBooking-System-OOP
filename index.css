@@ -1,0 +1,311 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+   
+
+
+
+
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* App Container */
+.app-container {
+  font-family: 'Inter', Arial, sans-serif;
+  text-align: center;
+  padding: 40px 20px; /* Increased padding */
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header */
+.header {
+  color: white;
+  background-color: #007bff;
+  padding: 20px; /* Increased padding */
+  margin-bottom: 30px;
+  font-size: 2.5rem; /* Larger font size */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added shadow */
+  letter-spacing: 1px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Controls Container */
+.controls-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px; /* Added more gap */
+  margin-bottom: 40px;
+  padding: 20px; /* Added padding for spacing */
+}
+
+/* Panels */
+.control-panel,
+.config-panel {
+  background-color: #fff;
+  padding: 30px; /* Increased padding */
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+  width: 280px; /* Slightly larger */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.control-panel:hover,
+.config-panel:hover {
+  transform: translateY(-8px); /* Increased hover effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Titles */
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Counter Buttons */
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.counter button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 15px; /* Larger buttons */
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 0 12px;
+  width: 50px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.counter button:hover {
+  background-color: #0056b3;
+  transform: scale(1.15); /* Slightly larger on hover */
+}
+
+.counter span {
+  font-size: 1.2rem; /* Larger counter font size */
+  font-weight: bold;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 15px 25px; /* Larger button */
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Progress Container */
+.progress-container {
+  background-color: #fff;
+  padding: 30px; /* Larger padding */
+  border-radius: 12px;
+  margin-bottom: 40px;
+  width: 70%; /* Wider container */
+  margin: 0 auto;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+progress {
+  width: 100%;
+  height: 25px; /* Larger progress bar */
+  margin: 20px 0; /* Increased margin */
+  appearance: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #e0e0e0;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+progress::-webkit-progress-value {
+  background-color: #007bff;
+  transition: width 0.5s ease-in-out;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #e0e0e0;
+}
+
+/* Start/Stop Buttons */
+.start-stop-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.start-stop-buttons button {
+  color: white;
+  border: none;
+  padding: 15px 40px; /* Larger buttons */
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.start-btn {
+  background-color: #28a745; /* Green color */
+}
+
+.stop-btn {
+  background-color: #dc3545; /* Red color */
+}
+
+.start-stop-buttons button:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+/* Message Container */
+.message-container {
+  margin-top: 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .controls-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .progress-container {
+    width: 90%;
+  }
+
+  .header {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .control-panel,
+  .config-panel {
+    width: 90%; /* Panels take full width */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .submit-btn,
+  .start-stop-buttons button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .progress-container {
+    padding: 20px;
+  }
+}
